@@ -1,0 +1,15 @@
+{
+  "name": "arbacs-studio",
+  "version": "1.2.1",
+  "description": "Arbacs Studio Launcher configurado para CHAMOsafio, con actualizaciones verificadas desde GitHub Releases",
+  "main": "index.js",
+  "author": "Arbacs Studio",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check index.js && node --check preload.js && node --check renderer.js"
+  },
+  "devDependencies": {
+    "electron": "^37.2.6"
+  }
+}

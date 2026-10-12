@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;">
+  <title>Arbacs Studio</title>
+  <style>
+    :root { color-scheme: dark; --blue:#1684ff; --pale:#a9d8ff; --muted:#8297bb; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; font-family:Inter,Segoe UI,Arial,sans-serif; color:#eef5ff; background:#030813; }
+    .app { min-height:100vh; display:grid; grid-template-rows:64px 1fr; background:
+      radial-gradient(ellipse at 53% 37%, rgba(0,73,190,.17), transparent 48%),
+      linear-gradient(130deg,#030711,#071327 58%,#030711); }
+    .topbar { display:flex; align-items:center; gap:12px; padding:0 25px; border-bottom:1px solid #142746; background:rgba(3,9,20,.88); }
+    .brand-flower { width:29px; height:29px; filter:drop-shadow(0 0 8px #147eff); }
+    .brand { font-size:17px; font-weight:650; letter-spacing:.3px; }
+    .window-dot { margin-left:auto; width:8px;height:8px;border-radius:50%;background:#318bff;box-shadow:0 0 10px #318bff; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr) 205px; min-height:0; }
+    aside { padding:28px 12px; border-right:1px solid #142746; background:rgba(3,9,20,.4); }
+    .nav { display:flex;align-items:center;gap:12px;padding:14px 15px;margin-bottom:8px;border-radius:9px;color:#9eb6db;font-size:14px; }
+    .nav.active { color:#e7f4ff;background:linear-gradient(90deg,#103568,#0a1d3a);border:1px solid #163b6e; }
+    .nav svg { width:19px;height:19px; }
+    main { padding:28px clamp(22px,4vw,58px) 22px; display:flex; flex-direction:column; align-items:center; }
+    .hero { width:100%; max-width:760px; text-align:center; padding-top:5px; }
+    .flower-large { width:154px;height:154px; margin:0 auto 7px; filter:drop-shadow(0 0 18px rgba(0,111,255,.75)); }
+    .wordmark { font-family:Georgia,'Times New Roman',serif;font-size:clamp(43px,6vw,68px);letter-spacing:8px;line-height:1.04;color:#f2f7ff;text-shadow:0 0 24px rgba(40,126,255,.36); }
+    .studio { color:#278bff;letter-spacing:12px;font-size:19px;margin:8px 0 10px 12px;font-weight:500; }
+    .tagline { color:#7f9bc7;letter-spacing:3px;font-size:12px;margin:0 0 29px; }
+    .pack { width:100%;display:flex;align-items:center;gap:15px;padding:15px 18px;border:1px solid #1c3558;border-radius:12px;background:linear-gradient(110deg,rgba(12,30,57,.94),rgba(5,13,28,.85));text-align:left; }
+    .cube { width:45px;height:45px; flex:0 0 45px;display:grid;place-items:center;border-radius:9px;background:linear-gradient(145deg,#1c4675,#0a1830);color:#7fc4ff;font-size:23px; }
+    .pack-name { font-weight:650;font-size:14px; }
+    .pack-sub { color:var(--muted);font-size:12px;margin-top:5px; }
+    .status { margin-left:auto;white-space:nowrap;border-radius:30px;padding:7px 11px;background:#0a302f;color:#6ce5cf;font-size:12px; }
+    .status::before { content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#43d6b8;margin-right:7px; }
+    .actions { display:grid;grid-template-columns:1fr 1fr;gap:13px;width:100%;margin-top:16px; }
+    button { cursor:pointer;font:inherit; }
+    .action { min-height:72px;border:1px solid #315787;border-radius:10px;color:#f4f8ff;background:linear-gradient(135deg,#14294a,#0a1730);font-weight:650;font-size:13px;letter-spacing:.3px;transition:transform .15s,border-color .15s,filter .15s; }
+    .action:hover { transform:translateY(-1px);border-color:#278bff;filter:brightness(1.13); }
+    .action.primary { background:linear-gradient(115deg,#087bfa,#0648d4);border-color:#1787ff;box-shadow:0 5px 22px rgba(0,77,210,.2); }
+    .action .sub { display:block;color:#a7c8f7;font-size:11px;font-weight:400;margin-top:6px;letter-spacing:0; }
+    .action:disabled { opacity:.65;cursor:wait;transform:none; }
+    .message { min-height:35px;margin:13px 0 0;color:#9eb8de;font-size:12px;text-align:center;line-height:1.5; }
+    .footer { width:100%;margin-top:auto;padding-top:22px;color:#6f8bb7;font-size:11px;display:flex;justify-content:space-between;gap:10px; }
+    .rightbar { border-left:1px solid #142746;padding:31px 18px;background:rgba(3,9,20,.38); }
+    .info { padding:0 0 22px;margin-bottom:22px;border-bottom:1px solid #172b49; }
+    .info-title { color:#3295ff;font-size:11px;letter-spacing:1px;margin-bottom:9px; }
+    .info-main {font-size:15px;margin-bottom:6px;}
+    .info-sub {color:#829cc4;font-size:12px;line-height:1.5;}
+    .small-button {border:1px solid #203d64;border-radius:8px;background:#0b1930;color:#a9cfff;padding:9px 10px;width:100%;font-size:12px;}
+    .small-button:hover {border-color:#238aff;}
+    @media(max-width:900px) { .layout{grid-template-columns:65px minmax(0,1fr)} aside{padding:22px 8px}.nav{justify-content:center;padding:13px 0;font-size:0}.rightbar{display:none}.flower-large{width:125px;height:125px}.wordmark{letter-spacing:4px}.studio{letter-spacing:8px} }
+    @media(max-width:560px) { .actions{grid-template-columns:1fr}.layout{grid-template-columns:1fr} aside{display:none}main{padding:24px 16px}.tagline{letter-spacing:1px}.footer{flex-wrap:wrap} }
+    .nav { cursor:pointer; border:1px solid transparent; user-select:none; }
+    .nav:focus-visible { outline:2px solid #278bff; outline-offset:2px; }
+    .modal-backdrop { display:none; position:fixed; inset:0; z-index:10; background:rgba(0,4,12,.78); backdrop-filter:blur(8px); align-items:center; justify-content:center; padding:20px; }
+    .modal-backdrop.open { display:flex; }
+    .settings-modal { width:min(620px,100%); max-height:90vh; overflow:auto; background:#08152a; border:1px solid #24466f; border-radius:16px; padding:24px; box-shadow:0 25px 90px #0009; }
+    .settings-head { display:flex; align-items:center; gap:12px; margin-bottom:7px; }
+    .settings-head h2 { font-size:21px; margin:0; }
+    .settings-help { color:#91a9ce; font-size:12px; line-height:1.6; margin:0 0 20px; }
+    .field { display:block; margin:14px 0; }
+    .field span { display:block; font-size:12px; color:#a9c6ed; margin-bottom:7px; }
+    .field input { width:100%; box-sizing:border-box; padding:11px 12px; border:1px solid #29496f; border-radius:8px; color:#f4f8ff; background:#040d1c; outline:none; }
+    .field input:focus { border-color:#278bff; box-shadow:0 0 0 3px #278bff25; }
+    .path-row { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px; }
+    .settings-actions { display:flex; justify-content:flex-end; gap:10px; margin-top:22px; }
+    .settings-actions button,.browse-button { border:1px solid #29496f; border-radius:8px; color:#d9eaff; background:#102340; padding:10px 14px; }
+    .settings-actions .save { background:#087bfa; border-color:#1787ff; color:white; font-weight:700; }
+    .settings-status { color:#9fc0e8; font-size:12px; margin-top:12px; min-height:18px; }
+    .mini-link { color:#67b3ff; text-decoration:underline; cursor:pointer; }
+  </style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <svg class="brand-flower" viewBox="0 0 100 100" aria-label="Flor azul" role="img">
+      <defs><linearGradient id="petal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a6eaff"/><stop offset=".45" stop-color="#238dff"/><stop offset="1" stop-color="#0642c6"/></linearGradient></defs>
+      <g fill="url(#petal)" stroke="#64baff" stroke-width="1">
+        <ellipse cx="50" cy="27" rx="12" ry="25"/><ellipse cx="50" cy="27" rx="12" ry="25" transform="rotate(45 50 50)"/><ellipse cx="50" cy="27" rx="12" ry="25" transform="rotate(90 50 50)"/><ellipse cx="50" cy="27" rx="12" ry="25" transform="rotate(135 50 50)"/>
+      </g><circle cx="50" cy="50" r="8" fill="#d8f6ff"/><circle cx="50" cy="50" r="4" fill="#258aff"/>
+    </svg>
+    <div class="brand">Arbacs Studio</div><div class="window-dot"></div>
+  </header>
+  <div class="layout">
+    <aside>
+      <div class="nav active"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z"/></svg>Inicio</div>
+      <div class="nav" id="settingsNav" role="button" tabindex="0" aria-label="Abrir configuración"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.4 1.1-1.5 2.6-1.7-.7a8 8 0 0 1-2 .9l-.3 1.8h-3l-.3-1.8a8 8 0 0 1-2-.9l-1.7.7-1.5-2.6L8.3 15a8 8 0 0 1 0-2l-1.4-1.1 1.5-2.6 1.7.7a8 8 0 0 1 2-.9l.3-1.8h3l.3 1.8a8 8 0 0 1 2 .9l1.7-.7 1.5 2.6-1.4 1.1a8 8 0 0 1 0 2z"/></svg>Configuración</div>
+      <div class="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-9h.01"/></svg>Acerca de</div>
+    </aside>
+    <main>
+      <section class="hero">
+        <svg class="flower-large" viewBox="0 0 200 200" role="img" aria-label="Flor azul de Arbacs Studio">
+          <defs>
+            <radialGradient id="bluePetal" cx="35%" cy="25%" r="80%"><stop stop-color="#c0f2ff"/><stop offset=".28" stop-color="#4bb6ff"/><stop offset=".68" stop-color="#1264f5"/><stop offset="1" stop-color="#072b94"/></radialGradient>
+            <radialGradient id="center"><stop stop-color="#fff"/><stop offset=".35" stop-color="#c8f5ff"/><stop offset="1" stop-color="#39aaff"/></radialGradient>
+          </defs>
+          <g transform="translate(100 100)" fill="url(#bluePetal)" stroke="#64c8ff" stroke-width="1.2">
+            <path d="M0 2 C-28 -10 -33 -49 0 -91 C33 -49 28 -10 0 2Z"/>
+            <path d="M0 2 C-28 -10 -33 -49 0 -91 C33 -49 28 -10 0 2Z" transform="rotate(60)"/>
+            <path d="M0 2 C-28 -10 -33 -49 0 -91 C33 -49 28 -10 0 2Z" transform="rotate(120)"/>
+            <path d="M0 2 C-28 -10 -33 -49 0 -91 C33 -49 28 -10 0 2Z" transform="rotate(180)"/>
+            <path d="M0 2 C-28 -10 -33 -49 0 -91 C33 -49 28 -10 0 2Z" transform="rotate(240)"/>
+            <path d="M0 2 C-28 -10 -33 -49 0 -91 C33 -49 28 -10 0 2Z" transform="rotate(300)"/>
+          </g>
+          <g stroke="#a9eaff" stroke-width="2" stroke-linecap="round">
+            <path d="M100 102 Q78 70 67 53"/><path d="M100 102 Q91 64 93 42"/><path d="M100 102 Q112 65 128 51"/><path d="M100 102 Q133 82 147 77"/><path d="M100 102 Q74 95 54 91"/>
+          </g>
+          <circle cx="100" cy="100" r="13" fill="url(#center)"/>
+          <g fill="#e6fbff"><circle cx="95" cy="96" r="2"/><circle cx="105" cy="101" r="2"/><circle cx="99" cy="106" r="1.8"/><circle cx="103" cy="93" r="1.5"/></g>
+        </svg>
+        <div class="wordmark">ARBACS</div>
+        <div class="studio">S T U D I O</div>
+        <p class="tagline">Pequeños mundos, grandes historias.</p>
+        <div class="pack">
+          <div class="cube">▦</div>
+          <div><div class="pack-name">Modpack Forge</div><div class="pack-sub">Minecraft 1.19.2 · Java 17</div></div>
+          <div class="status">Launcher listo</div>
+        </div>
+        <div class="actions">
+          <button class="action" id="update">⟳ &nbsp; ACTUALIZAR MODS<span class="sub">Buscar cambios del modpack</span></button>
+          <button class="action primary" id="play">▶ &nbsp; JUGAR MINECRAFT<span class="sub">Iniciar el juego cuando esté configurado</span></button>
+        </div>
+        <div class="message" id="message" role="status" aria-live="polite">Bienvenido a Arbacs Studio. Tu aventura comienza aquí.</div>
+        <div class="footer"><span>Arbacs Studio Launcher</span><span>v1.0.0 · Forge 1.19.2</span></div>
+      </section>
+    </main>
+    <aside class="rightbar">
+      <div class="info"><div class="info-title">✦ &nbsp; MODPACK</div><div class="info-main">Forge</div><div class="info-sub">Minecraft 1.19.2</div></div>
+      <div class="info"><div class="info-title">⬡ &nbsp; MODS</div><div class="info-main">45 archivos detectados</div><div class="info-sub">Colección inicial aprox. 199 MB</div></div>
+      <div class="info"><div class="info-title">♨ &nbsp; JAVA</div><div class="info-main">Java 17</div><div class="info-sub">Recomendado para Minecraft 1.19.2</div></div>
+      <div class="info"><div class="info-title">✧ &nbsp; TU MUNDO</div><div class="info-main">Hazlo único</div><div class="info-sub">Tus amigos, tus mods, tu aventura.</div></div>
+      <button class="small-button" id="openMods">Abrir carpeta de mods local</button>
+    </aside>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="settingsBackdrop" role="presentation">
+  <section class="settings-modal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+    <div class="settings-head"><div class="cube">⚙</div><h2 id="settingsTitle">Configuración de Arbacs</h2></div>
+    <p class="settings-help">Configura dónde está Minecraft, tu perfil Forge y el repositorio de GitHub para las actualizaciones. La autenticación del juego seguirá realizándose en el launcher oficial de Microsoft/Minecraft.</p>
+    <label class="field"><span>Usuario u organización de GitHub</span><input id="githubOwner" autocomplete="off" placeholder="tu-usuario"></label>
+    <label class="field"><span>Repositorio del modpack</span><input id="githubRepo" autocomplete="off" placeholder="mi-modpack"></label>
+    <label class="field"><span>Carpeta de Minecraft (.minecraft)</span><div class="path-row"><input id="minecraftDir" autocomplete="off" placeholder="Ruta predeterminada de Minecraft"><button class="browse-button" id="browseMinecraft" type="button">Examinar…</button></div></label>
+    <label class="field"><span>Nombre exacto del perfil Forge instalado</span><input id="forgeVersion" autocomplete="off" placeholder="1.19.2-forge-43.5.0"></label>
+    <label class="field"><span>Dirección de tu servidor (Playit.gg), opcional</span><input id="serverAddress" autocomplete="off" placeholder="ejemplo.playit.gg:25565"></label>
+    <p class="settings-help">La carpeta seleccionada debe ser la carpeta raíz .minecraft, no la carpeta mods. La carpeta mods se abrirá dentro de esa ubicación.</p>
+    <div class="settings-actions"><button id="cancelSettings" type="button">Cancelar</button><button class="save" id="saveSettings" type="button">Guardar configuración</button></div>
+    <div class="settings-status" id="settingsStatus" role="status" aria-live="polite"></div>
+  </section>
+</div>
+
+<script src="renderer.js"></script>
+</body>
+</html>

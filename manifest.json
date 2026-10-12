@@ -1,0 +1,277 @@
+{
+    "version":  "1.0.0",
+    "minecraftVersion":  "1.19.2",
+    "forgeVersion":  "1.19.2-forge-43.5.0",
+    "files":  [
+                  {
+                      "path":  "mods/[1.19.2] SecurityCraft v1.9.6.1.jar",
+                      "asset":  "[1.19.2] SecurityCraft v1.9.6.1.jar",
+                      "sha256":  "a3fec0ee63613303d821b80cdd82a92e5a07dc167ba9afa93f7556396e7cece8",
+                      "size":  3664060
+                  },
+                  {
+                      "path":  "mods/architectury-6.6.92-forge.jar",
+                      "asset":  "architectury-6.6.92-forge.jar",
+                      "sha256":  "61c2482c0bfaa8a917f042edd7b8d73107005602115bcdbb4638ec817dd56fa7",
+                      "size":  559099
+                  },
+                  {
+                      "path":  "mods/artifacts-1.19.2-5.0.6.jar",
+                      "asset":  "artifacts-1.19.2-5.0.6.jar",
+                      "sha256":  "3a1af2d263a7279183bc6f65f279799eb3f5ee9a028f178dba956976cd56a2ad",
+                      "size":  602656
+                  },
+                  {
+                      "path":  "mods/astikorcarts-1.19.2-1.1.2.jar",
+                      "asset":  "astikorcarts-1.19.2-1.1.2.jar",
+                      "sha256":  "52977ae11a4d230889db3c8859316976708af5940b3b4515a7b5aa5c88489afd",
+                      "size":  252577
+                  },
+                  {
+                      "path":  "mods/balm-forge-1.19.2-4.6.0.jar",
+                      "asset":  "balm-forge-1.19.2-4.6.0.jar",
+                      "sha256":  "16057fe2f0d22a38465cc8adedfe1e38222e5ab35a88fc15c08c539393f189af",
+                      "size":  314084
+                  },
+                  {
+                      "path":  "mods/bettercombat-forge-1.7.1+1.19.jar",
+                      "asset":  "bettercombat-forge-1.7.1+1.19.jar",
+                      "sha256":  "a5f36a6bb3d8fb6c25439aa8e0c03248053f30e633c832a3ee29946580a5d72b",
+                      "size":  904072
+                  },
+                  {
+                      "path":  "mods/bettervillage-forge-1.19.2-3.2.0.jar",
+                      "asset":  "bettervillage-forge-1.19.2-3.2.0.jar",
+                      "sha256":  "b152750842d04bf9833910eec95fd15fb302e92ab84c3222a911279ca594489d",
+                      "size":  2252776
+                  },
+                  {
+                      "path":  "mods/BiomesOPlenty-1.19.2-17.1.2.492.jar",
+                      "asset":  "BiomesOPlenty-1.19.2-17.1.2.492.jar",
+                      "sha256":  "a91b6f84d6930a1d425fb90136be2f0240e7cff3a1c439f145b235023a37d7fa",
+                      "size":  21401843
+                  },
+                  {
+                      "path":  "mods/born_in_chaos_[Forge]1.19.2_1.10.1.jar",
+                      "asset":  "born_in_chaos_[Forge]1.19.2_1.10.1.jar",
+                      "sha256":  "2cf5e8052231b3654e99d934489d8e34bef81a9f75f3094ef8459fea6dfde3f0",
+                      "size":  10265127
+                  },
+                  {
+                      "path":  "mods/citadel-1.12.6-1.19.jar",
+                      "asset":  "citadel-1.12.6-1.19.jar",
+                      "sha256":  "f97018e8b4ad5fc5162f524a2bf4511511c618f33765a3f9f7704a94555a7ec0",
+                      "size":  499012
+                  },
+                  {
+                      "path":  "mods/citadel-2.1.4-1.19.jar",
+                      "asset":  "citadel-2.1.4-1.19.jar",
+                      "sha256":  "3f733191150aefbd5c73e18127d8d9df81e714c05b87adf2eab3559f2907ea5d",
+                      "size":  3063232
+                  },
+                  {
+                      "path":  "mods/cloth-config-8.3.134-forge.jar",
+                      "asset":  "cloth-config-8.3.134-forge.jar",
+                      "sha256":  "350519f45e3b477b0255342e33952cdb55ccdc2485ffafdd100a3cd716dcf68a",
+                      "size":  1176412
+                  },
+                  {
+                      "path":  "mods/CreativeCore_FORGE_v2.11.28_mc1.19.2.jar",
+                      "asset":  "CreativeCore_FORGE_v2.11.28_mc1.19.2.jar",
+                      "sha256":  "c9fe181e7d6180a1d89a5d9e933e35cbd184fa70683a104d4f776191bcc80fd5",
+                      "size":  1116183
+                  },
+                  {
+                      "path":  "mods/curios-forge-1.19.2-5.1.6.4.jar",
+                      "asset":  "curios-forge-1.19.2-5.1.6.4.jar",
+                      "sha256":  "8f0d645f03f5472a823597a1fe8369aedca89b67058f1cfa9786a0a04767afc6",
+                      "size":  288916
+                  },
+                  {
+                      "path":  "mods/CyclopsCore-1.19.2-1.19.5.jar",
+                      "asset":  "CyclopsCore-1.19.2-1.19.5.jar",
+                      "sha256":  "f3aaefbc74d2902f748dd39aa946346cf2b34a657df990c0571c90fbe661a9b7",
+                      "size":  892685
+                  },
+                  {
+                      "path":  "mods/DungeonCrawl-1.19-2.3.12.jar",
+                      "asset":  "DungeonCrawl-1.19-2.3.12.jar",
+                      "sha256":  "907710ca84d9a3992ba56cc1574c1c148d1344f54c15b328194b5d18f56d4b26",
+                      "size":  760172
+                  },
+                  {
+                      "path":  "mods/dungeons-and-taverns-2.0.2 forge.jar",
+                      "asset":  "dungeons-and-taverns-2.0.2 forge.jar",
+                      "sha256":  "b90796e42eb28afb4963700ff0d1f6675a23379e2e6e3a2e7ea3c9a36094c94b",
+                      "size":  7794083
+                  },
+                  {
+                      "path":  "mods/DungeonsArise-1.19.2-2.1.56-beta.jar",
+                      "asset":  "DungeonsArise-1.19.2-2.1.56-beta.jar",
+                      "sha256":  "769e3ff215032fc6ab265d58dcafc496f3d751a8f38e97fc4a363d17dfe4ce27",
+                      "size":  7373714
+                  },
+                  {
+                      "path":  "mods/EvilCraft-1.19.2-1.2.40.jar",
+                      "asset":  "EvilCraft-1.19.2-1.2.40.jar",
+                      "sha256":  "7205f0b8b29260e366c776c73b5df1ae1c22145639e9619df8da13ef3191ec26",
+                      "size":  2691180
+                  },
+                  {
+                      "path":  "mods/FallingTree-1.19.2-3.10.1.jar",
+                      "asset":  "FallingTree-1.19.2-3.10.1.jar",
+                      "sha256":  "9c9dfc59e8023a217eb996d0e959839e3f6c9bc118a71f10fbfc22a6c4fab836",
+                      "size":  406121
+                  },
+                  {
+                      "path":  "mods/geckolib-forge-1.19-3.1.40.jar",
+                      "asset":  "geckolib-forge-1.19-3.1.40.jar",
+                      "sha256":  "b4fd4aba01943d4cc62bba9e2d0fb41d85c871a95fad972fbb2248d3d826ea02",
+                      "size":  2938383
+                  },
+                  {
+                      "path":  "mods/iceandfire-1.19.2-2.1.13-beta-2.jar",
+                      "asset":  "iceandfire-1.19.2-2.1.13-beta-2.jar",
+                      "sha256":  "8ef62ee9a252c81868ad69f1375065ae0f20d4c32f381e6cf56cd41144bbeb16",
+                      "size":  21620315
+                  },
+                  {
+                      "path":  "mods/immersive_aircraft-0.7.9+1.19.2-forge.jar",
+                      "asset":  "immersive_aircraft-0.7.9+1.19.2-forge.jar",
+                      "sha256":  "8ae788453e765257783673783cfbc3ba44257f24c3997578bee06c6ba54b9ddf",
+                      "size":  1573226
+                  },
+                  {
+                      "path":  "mods/ItemPhysic_FORGE_v1.6.7_mc1.19.2.jar",
+                      "asset":  "ItemPhysic_FORGE_v1.6.7_mc1.19.2.jar",
+                      "sha256":  "01edf0e3dcb84f25a4f80f2304c3c188f5a6147a2273a1f19769819b7424ce89",
+                      "size":  47226
+                  },
+                  {
+                      "path":  "mods/Jade-1.19.1-forge-8.9.2.jar",
+                      "asset":  "Jade-1.19.1-forge-8.9.2.jar",
+                      "sha256":  "2c06173bae9074b11523ca9366db2b37431a90f6b65ce97a7820dac11aefca81",
+                      "size":  429175
+                  },
+                  {
+                      "path":  "mods/jei-1.19.2-forge-11.8.1.1034.jar",
+                      "asset":  "jei-1.19.2-forge-11.8.1.1034.jar",
+                      "sha256":  "4ca677c4d7b8234da2071b3e93424a2e1eedd06906c20f55ff22a078cfd6e3b2",
+                      "size":  1177872
+                  },
+                  {
+                      "path":  "mods/journeymap-1.19.2-5.9.8-forge.jar",
+                      "asset":  "journeymap-1.19.2-5.9.8-forge.jar",
+                      "sha256":  "bc8639b5ba858a736a052bfed33e5f0ba0f6cd1df6dadceedc2aa5f5a38d043d",
+                      "size":  7091961
+                  },
+                  {
+                      "path":  "mods/L_Enders_Cataclysm-1.99.2-1.19.2.jar",
+                      "asset":  "L_Enders_Cataclysm-1.99.2-1.19.2.jar",
+                      "sha256":  "3067626b9a8682be11a3aa43c19c8409e20276f65cbdc3866a329d42f05485e2",
+                      "size":  48152094
+                  },
+                  {
+                      "path":  "mods/libraryferret-forge-1.19.2-4.0.0.jar",
+                      "asset":  "libraryferret-forge-1.19.2-4.0.0.jar",
+                      "sha256":  "fe23f3c5e823d7453ef46b4a7515ce6258823ac0dc8da383d55f56e36656a4e2",
+                      "size":  189524
+                  },
+                  {
+                      "path":  "mods/lionfishapi-1.8.jar",
+                      "asset":  "lionfishapi-1.8.jar",
+                      "sha256":  "9b866047472b7e31210b78cdb671d940271d29a7865e499f7ef1b5543054e3d4",
+                      "size":  126780
+                  },
+                  {
+                      "path":  "mods/naturalist-forge-4.0.3-1.19.2.jar",
+                      "asset":  "naturalist-forge-4.0.3-1.19.2.jar",
+                      "sha256":  "ca6f1b2c507eb05f513146cb1921ac46fd095ea3e685cb65b390e1fd9c572100",
+                      "size":  3472590
+                  },
+                  {
+                      "path":  "mods/Paraglider-1.19.2-1.7.0.5.jar",
+                      "asset":  "Paraglider-1.19.2-1.7.0.5.jar",
+                      "sha256":  "299e0cd7b052ce348c7db79bb9e1e339d92bd81de9bb7025ed7e248ae916789e",
+                      "size":  382706
+                  },
+                  {
+                      "path":  "mods/player-animation-lib-forge-1.0.2.jar",
+                      "asset":  "player-animation-lib-forge-1.0.2.jar",
+                      "sha256":  "80fb5397ce77981d63e56cb4d6953c5657ad3b96783152ec2048a90568431a76",
+                      "size":  181297
+                  },
+                  {
+                      "path":  "mods/PlayerRevive_FORGE_v2.0.17_mc1.19.2.jar",
+                      "asset":  "PlayerRevive_FORGE_v2.0.17_mc1.19.2.jar",
+                      "sha256":  "7cfa28a6cb48adde89b239f8a965d1ddc3357139cb0922063f247f5c7f678e30",
+                      "size":  5292758
+                  },
+                  {
+                      "path":  "mods/PuzzlesLib-v4.4.3-1.19.2-Forge.jar",
+                      "asset":  "PuzzlesLib-v4.4.3-1.19.2-Forge.jar",
+                      "sha256":  "bb95c2854dd24d60f0bf93c7f3e45e79661067920618ed590e140000cc67210d",
+                      "size":  395272
+                  },
+                  {
+                      "path":  "mods/simpleplanes-1.19.2-5.2.3.jar",
+                      "asset":  "simpleplanes-1.19.2-5.2.3.jar",
+                      "sha256":  "e137d35bf33b48bf093843225bbe7bf03e87cea13f1ae2cd99cb5751f98f7898",
+                      "size":  667947
+                  },
+                  {
+                      "path":  "mods/simplyswords-forge-1.47.0-1.19.2.jar",
+                      "asset":  "simplyswords-forge-1.47.0-1.19.2.jar",
+                      "sha256":  "fdcb87370c7ee33fe656b026345e99b685cbfa5730ee43761737b458e43daf1d",
+                      "size":  32228283
+                  },
+                  {
+                      "path":  "mods/TerraBlender-forge-1.19.2-2.0.1.166.jar",
+                      "asset":  "TerraBlender-forge-1.19.2-2.0.1.166.jar",
+                      "sha256":  "54215caf3ac7d79d79df4a20614f3617ee9e2531322ea28231e22b8123bdb2f4",
+                      "size":  96810
+                  },
+                  {
+                      "path":  "mods/Terralith_v2.3.4.jar",
+                      "asset":  "Terralith_v2.3.4.jar",
+                      "sha256":  "dffb09c5b2e4dc4f8355eb690e99c5bb19724675a264b11cad80433c411b3010",
+                      "size":  4017459
+                  },
+                  {
+                      "path":  "mods/tombstone-1.19.2-8.3.7.jar",
+                      "asset":  "tombstone-1.19.2-8.3.7.jar",
+                      "sha256":  "13475186c1b2dd17f9ca8479f6c85f140f10790e4cc5383e4774b65179ad2bff",
+                      "size":  2237274
+                  },
+                  {
+                      "path":  "mods/travelersbackpack-forge-1.19.2-8.2.41.jar",
+                      "asset":  "travelersbackpack-forge-1.19.2-8.2.41.jar",
+                      "sha256":  "8120eb866fb71d53eeb98640e57f228bd441c92fff15d9bbafe8333198ee8494",
+                      "size":  891873
+                  },
+                  {
+                      "path":  "mods/visuality-forge-2.0.2.jar",
+                      "asset":  "visuality-forge-2.0.2.jar",
+                      "sha256":  "c9f00a2a38722a8fbfa2e213206ec6309ba04b118602bfc635a9a3394d1c1354",
+                      "size":  216129
+                  },
+                  {
+                      "path":  "mods/VisualWorkbench-v4.2.4-1.19.2-Forge.jar",
+                      "asset":  "VisualWorkbench-v4.2.4-1.19.2-Forge.jar",
+                      "sha256":  "d1cd8b856c59bcbf4a9f985ed23aeadd6ce0a0117de6987b05dafa786f0dcd3b",
+                      "size":  82918
+                  },
+                  {
+                      "path":  "mods/waystones-forge-1.19.2-11.4.2.jar",
+                      "asset":  "waystones-forge-1.19.2-11.4.2.jar",
+                      "sha256":  "dd06dc2fcdd3d7a49512238b445aa48a817d61d45ba4cb12b4332bac06a2df4e",
+                      "size":  409113
+                  },
+                  {
+                      "path":  "mods/weaponmaster_ydm-forge-1.19.2-4.2.3.jar",
+                      "asset":  "weaponmaster_ydm-forge-1.19.2-4.2.3.jar",
+                      "sha256":  "5a58421089573f3ebf8cb641eadd8c12fa4a2e2e1258bc05732145529876dc39",
+                      "size":  283975
+                  }
+              ]
+}
